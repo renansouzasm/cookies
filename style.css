@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-center: #c40a2a;
+  --bg-edge: #7a0010;
+  --text: #dedede;
+  --brand: #a4081d;
+
+  --font-pacifico: "Pacifico", cursive, sans-serif;
+  --font-beabas-neue: "Bebas Neue", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  color: var(--text);
+  font-family: var(--font-montserrat);
+  background: radial-gradient(
+    circle at center,
+    var(--bg-center) 0%,
+    var(--bg-edge) 100%
+  );
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo {
+  font-family: var(--font-pacifico);
+  font-size: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.4;
+}
+
+.container-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.text-section {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text-section h1 {
+  font-family: var(--font-beabas-neue);
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.text-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.shop-button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--text);
+  color: var(--brand);
+  text-decoration: none;
+  border-radius: 48px;
+  padding: 12px 12px 12px 24px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease;
+}
+
+.shop-button:hover {
+  transform: translateY(-4px);
+}
+
+.btn-text {
+  margin-right: 32px;
+}
+
+.btn-icon {
+  background: var(--brand);
+  color: var(--text);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 968px) {
+  .container-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    max-width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .text-section h1 {
+    font-size: 64px;
+  }
+}
